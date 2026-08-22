@@ -354,7 +354,7 @@ export default function Home() {
                 <div>
                   <h3 className="text-2xl font-bold">NAVRobotec</h3>
                   <p className="mt-2 font-semibold text-indigo-500">
-                    Full Stack Developer Intern
+                    Full Stack Developer Intern (Remote)
                   </p>
                 </div>
                 <span className="text-sm">Oct 2025 — Dec 2025</span>
