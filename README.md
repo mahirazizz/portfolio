@@ -1,6 +1,6 @@
 # Mahir Aziz Portfolio
 
-A responsive personal portfolio website built with HTML, CSS, and JavaScript. It showcases skills, experience, projects, and contact information in a modern dark/light themed layout.
+A responsive personal portfolio website built with Next.js, React, and Tailwind CSS. It showcases skills, experience, projects, and contact information in a modern dark/light themed layout.
 
 ## Features
 
@@ -14,21 +14,21 @@ A responsive personal portfolio website built with HTML, CSS, and JavaScript. It
 
 ## Tech Stack
 
-- HTML5
-- CSS3
-- JavaScript
+- Next.js and React
+- Tailwind CSS
 - Node.js, Express, MongoDB, and Telegram Bot API
 
 ## Project Structure
 
 ```text
 portfolio/
-├── index.html
-├── styles.css
-├── script.js
+├── pages/index.js
+├── pages/api/contact.js
+├── pages/api/health.js
+├── styles/globals.css
 ├── server.js
-├── api/index.js
-├── vercel.json
+├── next.config.js
+├── postcss.config.mjs
 └── README.md
 ```
 
@@ -36,13 +36,13 @@ portfolio/
 
 1. Run `npm install`.
 2. Copy `.env.example` to `.env` and add your private MongoDB and Telegram values.
-3. Run `npm start`.
+3. Run `npm run dev`.
 4. Open `http://localhost:3000`.
 
 ## Deploy to Vercel
 
 1. Import the GitHub repository `mahirazizz/portfolio` into Vercel.
-2. Keep the project root as the repository root. No build command is required.
+2. Select the Next.js framework preset and keep the project root as the repository root.
 3. Add these Production Environment Variables in Vercel:
    - `MONGODB_URI`
    - `MONGODB_DB`
