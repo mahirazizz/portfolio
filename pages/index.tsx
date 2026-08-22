@@ -156,7 +156,7 @@ export default function Home() {
       >
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
           <a href="#home" className="text-lg font-black tracking-tight">
-            Mahir<span className="text-indigo-500">.</span>
+            Mahir Aziz<span className="text-indigo-500">.</span>
           </a>
           <div className="hidden items-center gap-7 text-sm md:flex">
             {navItems.map((item) => (

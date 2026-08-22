@@ -81,20 +81,16 @@ export default async function handler(
     const message = clean(req.body?.message, 2000);
 
     if (!name || !email || !message) {
-      return res
-        .status(400)
-        .json({
-          success: false,
-          message: "Name, email, and message are required.",
-        });
+      return res.status(400).json({
+        success: false,
+        message: "Name, email, and message are required.",
+      });
     }
     if (!emailRegex.test(email)) {
-      return res
-        .status(400)
-        .json({
-          success: false,
-          message: "Please provide a valid email address.",
-        });
+      return res.status(400).json({
+        success: false,
+        message: "Please provide a valid email address.",
+      });
     }
 
     const data: ContactData = {
@@ -121,11 +117,9 @@ export default async function handler(
       .json({ success: true, message: "Message sent successfully." });
   } catch (error) {
     console.error("Contact submission failed:", error);
-    return res
-      .status(500)
-      .json({
-        success: false,
-        message: "Unable to send your message right now.",
-      });
+    return res.status(500).json({
+      success: false,
+      message: "Unable to send your message right now.",
+    });
   }
 }
