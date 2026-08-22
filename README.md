@@ -10,13 +10,14 @@ A responsive personal portfolio website built with HTML, CSS, and JavaScript. It
 - Theme toggle for light/dark mode
 - Project filtering by technology
 - Scroll progress indicator
-- Contact form interaction
+- Contact form with MongoDB storage and Telegram notifications
 
 ## Tech Stack
 
 - HTML5
 - CSS3
 - JavaScript
+- Node.js, Express, MongoDB, and Telegram Bot API
 
 ## Project Structure
 
@@ -25,15 +26,31 @@ portfolio/
 ├── index.html
 ├── styles.css
 ├── script.js
-├── README.md
-└── assets/   (if added later)
+├── server.js
+├── api/index.js
+├── vercel.json
+└── README.md
 ```
 
-## How to Run
+## How to Run Locally
 
-1. Open the project folder in VS Code.
-2. Start a local preview using Live Server, or simply open `index.html` in a browser.
-3. The site will load without any build step because it is a static website.
+1. Run `npm install`.
+2. Copy `.env.example` to `.env` and add your private MongoDB and Telegram values.
+3. Run `npm start`.
+4. Open `http://localhost:3000`.
+
+## Deploy to Vercel
+
+1. Import the GitHub repository `mahirazizz/portfolio` into Vercel.
+2. Keep the project root as the repository root. No build command is required.
+3. Add these Production Environment Variables in Vercel:
+   - `MONGODB_URI`
+   - `MONGODB_DB`
+   - `TELEGRAM_BOT_TOKEN`
+   - `TELEGRAM_CHAT_ID`
+4. Deploy and open the generated URL.
+
+The contact form and API use the same deployed domain. Check `/api/health` after deployment.
 
 ## Customization
 
@@ -46,7 +63,7 @@ To personalize the portfolio:
 
 ## Notes
 
-This is a frontend-only portfolio and does not require Node.js or package installation.
+Keep `.env` private and never commit real credentials. `.env` is ignored by Git.
 
 ## License
 

@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Portfolio website with contact form, MongoDB storage, and free Telegram alerts",
   "main": "server.js",
+  "engines": {
+    "node": ">=18"
+  },
   "scripts": {
     "start": "node server.js",
     "dev": "node server.js"
